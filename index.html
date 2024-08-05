@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Kanban Teste</h1>
+        <button class="generico" onclick="openModal()">Tarefa</button>
+    </div>
+
+    <div class="container">
+
+        <div class="coluna">
+            <div class="head">
+                <span>Arquivado</span>
+            </div>
+            <div class="body">
+            </div>
+        </div>
+
+        <div class="coluna">
+            <div class="head">
+                <span>Tarefa</span>
+            </div>
+            <div class="body">
+            </div>
+        </div>
+
+        <div class="coluna">
+            <div class="head">
+                <span>Em progresso</span>
+            </div>
+            <div class="body">
+            </div>
+        </div>
+
+        <div class="coluna">
+            <div class="head">
+                <span>Finalizado</span>
+            </div>
+            <div class="body">
+            </div>
+        </div>
+    </div>
+
+    <div id="modal">
+        <div class="box">
+            <div class="head">
+                <span>Nova tarefa</span>
+                <button onclick="closeModal()">X</button>
+            </div>
+
+            <div class="form">
+                <div class="form-group">
+                    <label for="description">Descrição</label>
+                    <textarea id="description" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="prioridade">Prioridade</label>
+                    <select id="prioridade">
+                        <option>Baixa</option>
+                        <option>Média</option>
+                        <option>Alta</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Prazo</label>
+                    <input type="date" id="deadline">
+                </div>
+
+                <button class="generico" onclick="createTask()">Cadastrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
